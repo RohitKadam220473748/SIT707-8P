@@ -21,7 +21,7 @@ public class LoginTest {
     }
 
     @Test
-    public void testNullDOB() {
+    public void testNullDOBcorrectusernamepassword() {
         Assert.assertFalse(LoginService.login("ahsan", "ahsan_pass", null));
     }
     
