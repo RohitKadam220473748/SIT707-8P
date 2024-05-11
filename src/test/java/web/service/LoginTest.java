@@ -11,12 +11,12 @@ public class LoginTest {
     }
 
     @Test
-    public void testNullUsername() {
+    public void testNullUsernamecorrectpassworddob() {
         Assert.assertFalse(LoginService.login(null, "ahsan_pass", "1997-12-10"));
     }
 
     @Test
-    public void testNullPassword() {
+    public void testNullPasswordcorrectusernamedob() {
         Assert.assertFalse(LoginService.login("ahsan", null, "1997-12-10"));
     }
 
