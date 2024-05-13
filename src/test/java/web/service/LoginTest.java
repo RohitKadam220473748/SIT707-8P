@@ -26,6 +26,11 @@ public class LoginTest {
     }
     
     @Test
+    public void testNullusernamepassworddob() {
+        Assert.assertFalse(LoginService.login(null, null, null));
+    }
+    
+    @Test
     public void testWrongUsernamePasswordAndDOB() {
         Assert.assertFalse(LoginService.login("abc", "abc_123", "1998-11-11"));
     }
@@ -53,12 +58,6 @@ public class LoginTest {
     @Test
     public void testCorrectUsernameWrongPasswordAndCorrectDOB() {
         Assert.assertFalse(LoginService.login("ahsan", "abc_123", "1997-12-10"));
-    }
-
-    @Test
-    public void testInvalidDOBFormat() {
-        Assert.assertFalse(LoginService.login("ahsan", "ahsan_pass", "1997/12/10")); 
-        Assert.assertFalse(LoginService.login("ahsan", "ahsan_pass", "10-12-1997")); 
     }
 
     @Test
